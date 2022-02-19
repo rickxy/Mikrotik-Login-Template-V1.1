@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="title">STATUS</title>
+$(if refresh-timeout)
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<link rel="icon" href="favicon2.png" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<style>
+iframe  {float:left; height:22px; width:100%;}
+</style>
+<script type="text/javascript" src="data.js"></script>
+<script language="JavaScript">
+
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+    if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+    popup = open('$(link-advert)', 'hotspot_advert', '');
+    setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+    if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+    window.close();
+    return false;
+    }
+
+</script>
+<style type="text/css">
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+  border-radius: 5px;
+</style>
+</head>
+  <article id="elements">
+    
+    <center>
+    <div class="card">
+      $(if login-by == 'trial')
+<h2 class="major">Selamat Datang</h2>
+      $(elif login-by != 'mac')
+<h2 class="major">Selamat Datang</h2>
+        <div id="user" style="text-align: center; font-weight:bold; margin-top:10px;">$(username)</div> 
+      $(endif) 
+    <div class="notif" id="notifikasi"></div>
+    <div style="padding:10px;"><a class="a" id="cek" href="./detail.html"></a></div>
+    <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+   
+                                    <div class="table-wrapper">
+      <table class="alt">
+        <tr>
+            <td  style="width:20%;">IP</td>
+            <td>$(ip)</td>
+        </tr>
+        <tr>
+            <td  style="width:20%;">MAC</td>
+            <td>$(mac)</td>
+        </tr>
+        <tr>
+            <td >UL | DL</td>
+            <td>$(bytes-in-nice) | $(bytes-out-nice)</td>
+        </tr>
+        <tr>
+            <td >Aktif</td>
+            <td>$(uptime)</td>
+        </tr>
+        $(if session-time-left)
+        <tr>
+            <td >Sisa Waktu</td>
+            <td>$(session-time-left)</td>
+        </tr>
+        $(endif)
+        $(if blocked == 'yes')
+        <tr>
+            <td >Status</td>
+            <td><div style="color: #FF8080"><a href="$(link-advert)" target="hotspot_advert">advertisement</a> required</div></td>
+        </tr>
+        $(elif refresh-timeout)
+        <tr>
+            <td >Refresh</td>
+            <td>$(refresh-timeout)</td>
+        </tr>
+        $(if session-time-left)
+	    <tr><td>Expired </td><td align="right">
+        <iframe id="exp" frameborder="0" scrolling="no" src="about:blank"></iframe></td></tr>
+        $(endif)
+        </table>
+        $(if login-by-mac != 'yes')
+        <br>
+        <input type="submit" class="buttonb" value=" Logout | Keluar ">
+        $(endif)
+      
+    </form>
+    <br>
+    </div>
+    </div>
+    </center>
+    <script type="text/javascript" >
+        //get validity
+        var usr = document.getElementById('user').innerHTML
+        var url = "https://ldnet.mikhmon.net/status/status.php?name="; // http://ip-server-mikhmon/mikhmonv2/status/status.php?name=
+        var SessionName = "ldnetonline"
+        var getvalid = url+usr+"&session="+SessionName
+        document.getElementById("exp").src = getvalid;
+    </script>
+</article>
+</html>

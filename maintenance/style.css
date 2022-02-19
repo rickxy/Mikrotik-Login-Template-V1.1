@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #1b1f22;
+}
+
+.ld {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+h1{
+    border-bottom: 1px solid;
+}
+.ld .row {
+    width: 80%;
+    margin: auto;
+    color: #ffffff;
+    font-family: sans-serif;
+    display: grid;
+}
+
+.ld .row .img {
+    width: 100%;
+    margin: auto;
+}
+
+.ld .row .title {
+    margin: auto;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .ld {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ld {
+        width: 500px;
+    }
+}

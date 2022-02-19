@@ -1,0 +1,717 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #1b1f22;
+    /* background: #fcfcfc; */
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    width: 90%;
+    color: #bbb;
+}
+
+button {
+    outline: none;
+}
+
+.ld .container {
+    padding-bottom: 0;
+    min-height: 0;
+    background: #1b1f22;
+}
+
+.container {
+    margin: auto;
+    min-height: 100vh;
+    padding-bottom: 4px;
+    background: #1b1f22;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        /* -webkit-box-shadow: 0px 0px 37px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 37px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 37px -1px rgba(0, 0, 0, 0.25); */
+    }
+
+    .info-top {
+        width: 100%;
+    }
+
+    .info-pesanan {
+        width: 100%;
+    }
+
+    .ld .row {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 360px;
+    }
+
+    .info-top {
+        width: 360px;
+    }
+
+    .info-pesanan {
+        width: 360px;
+    }
+
+    .ld .row {
+        width: 300px;
+    }
+}
+
+.top-menu {
+    width: 100%;
+    height: 60px;
+    background-color: #118eea;
+    display: flex;
+}
+
+.top-menu .box {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.top-menu .top-btn {
+    width: 100px;
+    height: 34px;
+    margin: auto;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.top-menu .top-btn:focus {
+    outline: none;
+}
+
+.top-menu .top-btn:hover {
+    background-color: rgba(0, 0, 0, 0.294);
+}
+
+.top-menu .active {
+    background-color: rgba(0, 0, 0, 0.294);
+}
+
+.top-btn svg {
+    margin: auto;
+}
+
+.top-btn .span {
+    margin: auto;
+    margin-left: 0;
+}
+
+.top-menu .box .back {
+    width: 20px;
+    margin: auto 0;
+}
+
+.top-menu .box .back a {
+    color: #fff;
+}
+
+.top-menu .box .back button {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.top-menu .box .back button:focus {
+    outline: none;
+}
+
+.top-menu .box .title {
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.top-hr {
+    width: 100%;
+    background-color: #118eea;
+}
+
+.top-hr .hr {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+}
+
+.top-hr .hr .lr {
+    width: 40px;
+    height: 4px;
+    background-color: #bbb;
+    border-radius: 2px;
+    margin: auto;
+}
+
+
+/* Success & Logout */
+.ld {
+    width: 90%;
+    /*background: #11ea97;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.ld .row {
+    margin: auto;
+    color: #fff;
+    font-family: sans-serif;
+    display: grid;
+}
+
+.ld .row .img {
+    width: 100%;
+    margin: auto;
+}
+
+.ld .row .title {
+    margin: auto;
+}
+
+.ld .row span {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 12px;
+}
+
+.ld .row .button {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.ld .row .button .btn-cek {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #028fd6;
+    border-radius: 5px;
+    background: #028fd6;
+    transition-duration: 250ms;
+}
+
+.ld .row .butex {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.ld .row .butex .btn-cek {
+width: 100%;
+height: 40px;
+color: #fff;
+font-weight: bold;
+border: 1px solid #028fd6;
+border-radius: 5px;
+background: #028fd6;
+transition-duration: 250ms;
+}
+
+.ld .row .button .btn-cek:hover {
+    color: #fff;
+    background: #118eea;
+}
+
+.ld .row .button .btn-cek:focus {
+    outline: none;
+}
+
+.ld .row .butex .btn-cek:hover {
+    color: #fff;
+    background: #118eea;
+}
+
+.ld .row .butex .btn-cek:focus {
+    outline: none;
+}
+
+
+/* List Voucher*/
+.title-voucher {
+    width: 90%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.list-voucher {
+    width: 100%;
+    margin: auto auto 20px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.list-voucher .row {
+    margin: auto;
+    padding: 0 5px;
+    /* margin: auto 5px; */
+}
+
+.list-voucher .list {
+    text-decoration: none;
+}
+
+.list-voucher .list .voucher {
+    height: 150px;
+    border-radius: 10px;
+}
+
+/*Payout Voucher*/
+.ket-voucher {
+    width: 90%;
+    margin: auto;
+}
+
+.ket-voucher .img {
+    width: 100%;
+    display: grid;
+}
+
+.ket-voucher .img .title {
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: large;
+}
+
+.ket-voucher .img img {
+    max-height: 150px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.ket-voucher .descrip {
+    width: 100%;
+    margin-top: 20px;
+    color: #6b6b6b;
+    font-family: sans-serif;
+}
+
+.ket-voucher .descrip .title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.ket-voucher .descrip .dex ul {
+    margin: 10px;
+    margin-inline-start: 0;
+}
+
+.ket-voucher .descrip .dex ul li {
+    margin: 2px auto
+}
+
+.ket-voucher .button-beli {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.ket-voucher .button-beli button {
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    color: #118eea;
+    font-weight: bold;
+    border: 1px solid #118eea;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.ket-voucher .button-beli button:hover {
+    color: #fff;
+    background: #118eea;
+}
+
+.ket-voucher .button-beli button:focus {
+    outline: none;
+}
+
+.form-pesanan {
+    width: 90%;
+    margin: auto;
+}
+
+.form-pesanan .title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-pesanan .form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-pesanan .form .rw {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.form-pesanan .form .rw .title {
+    text-align: start;
+    font-weight: normal;
+}
+
+.form-pesanan .form .rw input {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    border: none;
+    font-size: 14px;
+    border-bottom: 1px solid #bbb;
+    outline: none;
+}
+
+.form-pesanan .form .rw .kuan {
+    outline: none;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #118eea;
+    border-radius: 20%;
+    color: #118eea;
+    background: #fff;
+}
+
+.form-pesanan .form .rw .kuan:hover {
+    color: #fff;
+    background: #a52a2a;
+}
+
+.form-pesanan .form .rw .kuan:hover:last-child {
+    color: #fff;
+    background: #11ea97;
+}
+
+.form-pesanan .form .rw .kuant {
+    width: 10%;
+    text-align: center;
+}
+
+.form-pesanan .form .rw .kuant:disabled {
+    background: none;
+}
+
+.form-pesanan .form .button-beli {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.form-pesanan .form .button-beli button {
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    color: #118eea;
+    font-weight: bold;
+    border: 1px solid #118eea;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.form-pesanan .form .button-beli button:hover {
+    color: #fff;
+    background: #118eea;
+}
+
+.form-pesanan .form .button-beli button:focus {
+    outline: none;
+}
+
+/*Cara melakukan pemesanan*/
+.info-pesanan {
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.473);
+}
+
+.info-pesanan .box {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    background: #fff;
+}
+
+.info-pesanan .box .row {
+    width: 90%;
+    margin: auto;
+}
+
+.info-pesanan .box .row .title {
+    width: 100%;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.info-pesanan .box .row .descrip {
+    width: 100%;
+}
+
+.info-pesanan .box .row .descrip .row {
+    width: 100%;
+    margin: auto;
+}
+
+.info-pesanan .box .row .descrip .row .title {
+    width: 100%;
+    margin: 10px 0 0;
+    font-size: 18px;
+    text-align: start;
+}
+
+.info-pesanan .box .row .descrip .row p {
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+.info-pesanan .box .row .btn {
+    width: 100%;
+    height: 40px;
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to top, #118eea, #6ad0ff);
+}
+
+.info-pesanan .box .row .btn:hover {
+    background: linear-gradient(to top, #0470bd, #1597d3);
+}
+
+.info-pesanan .box .row .btn:focus {
+    outline: none;
+}
+
+/*Payout Voucher & Paket versi 2*/
+.payout-detail {
+    width: 90%;
+    margin: auto;
+}
+
+.payout-detail .title {
+    color: #1a1c1b;
+    font-weight: bold;
+}
+
+.payout-detail .row {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+}
+
+.payout-detail .row .img {
+    width: 28%;
+    margin-right: auto;
+}
+
+.payout-detail .row .img img {
+    width: 100%;
+}
+
+.payout-detail .row .descrip {
+    width: 68%;
+    margin-left: auto;
+}
+
+.payout-detail .row .descrip .title {
+    color: #4c4c4c;
+    font-size: small;
+}
+
+.payout-detail .row .descrip .ket {
+    color: #717171;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.payout-detail .aktif {
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.payout-detail .aktif svg {
+    width: 10%;
+    margin: auto;
+    color: #1f1f1f;
+}
+
+.payout-detail .aktif .time {
+    width: 90%;
+    margin: auto;
+    color: #676767;
+    font-size: small;
+}
+
+.payout-detail .title-total {
+    width: 100%;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.payout-detail .detail-harga {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #bebec0;
+    border-bottom: 1px solid #bebec0;
+}
+
+.payout-detail .detail-harga .title {
+    width: 50%;
+    color: #454545;
+    margin: auto;
+    margin-left: 0;
+}
+
+.payout-detail .detail-harga .harga {
+    color: #454545;
+}
+
+.payout-detail .button-beli {
+    width: 80%;
+    margin: 40px auto auto;
+}
+
+.payout-detail .button-beli button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    background: #118eea;
+}
+
+/*Bantuan*/
+.info-top {
+    top: 0;
+    position: fixed;
+}
+
+.info-top .box {
+    width: 100%;
+    position: absolute;
+    background: #ffffff;
+}
+
+.info-top .box .row {
+    width: 90%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+}
+
+.info-top .box .row button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: none;
+    background: #ffffff;
+}
+
+.info-top .box .row #kembali {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.info-top .box .row button:focus {
+    outline: none;
+}
+
+.info-top .box .row button svg {
+    color: #070707;
+    margin: auto 10px auto 0;
+}
+
+.info-top .box .row button .title {
+    color: #424345;
+    margin: auto 0;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: start;
+}
+
+.conin {
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.conin .row {
+    width: 90%;
+    height: 40px;
+    margin: 10px auto 0;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.conin .row button {
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+.conin .row button:focus {
+    outline: none;
+}
+
+.conin .row button .title {
+    color: #111111;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.coninf {
+    width: 100%;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.coninf .row {
+    width: 90%;
+    margin: auto;
+}

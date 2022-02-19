@@ -1,0 +1,169 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+body{
+    font-family: 'Source Sans Pro' !important;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: #f0f2f9;
+}
+h3{
+    font-weight: bold;
+    font-family: 'Source Sans Pro' !important;
+    font-size: 1.75rem;
+}
+a{text-decoration: none; color: inherit;}
+/* Container */
+.container{width: 100%;height: auto;display: flex;justify-content: center;align-items: center;}
+
+/* Navigasi */
+.nav{position: relative; z-index: 99; font-family: 'Source Sans Pro' !important; width: 100%; height: 100px; background-color: #fff; display: flex; justify-content:space-around; align-items: center; box-shadow:0 0 10px 5px rgba(0,0,0,0.5);}
+.nav-logo{font-size: 50px; color: #00bcf1;}
+
+.nav-menu{width: 20%; transition: .4s ease-in-out;}
+.nav-menu ul {display: flex; justify-content:center;}
+.nav-menu ul li{margin-right:30px ;transition: all .2s ease;}
+.nav-menu ul li:hover{transform: scale(0.98);}
+
+/* Banner */
+.banner{     
+    width: 100%;
+    height: 165px;
+    background-position: 0 -70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Gilroy Bold';
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.banner2{ width: 100%; transition: .4s ease-in-out;display: flex;justify-content: center;align-items: center;color: #333;font-size: 40px;font-family: 'Gilroy Bold';padding: 20px;box-sizing: border-box;}
+
+/* Paket Hotspot */
+.paket-hotspot{width: 1036px;height: auto;margin-top: -60px; display: flex; justify-content:  center; align-items:center;flex-wrap: wrap;}
+.card-hotspot{ 
+    position:relative; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start; 
+    width: 320px;
+    height: 230px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-image: url(/images/bgvoc.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: -1px 1px 5px 2px rgba(0,0,0,0.5); 
+    transition: all .4s ease;
+    margin: 0 10px 10px 0; }
+.card-hotspot:hover{
+    margin-top: -10px;}
+.card-hotspot h1{
+    background-color: #1c6698;clip-path: polygon(100% 0,95% 50%,100% 100%,0 100%,0 50%,0 1%);padding:5px 5px 5px 10px;width: 50%;color: #fff;font-weight: bold;margin:0 0 15px -10px;}
+.card-hotspot h2{
+    font-family: 'Source Sans Pro';margin-bottom: 20px;}
+.card-hotspot h3{
+    font-family: 'Source Sans Pro';font-size: 40px; color: #00bcf1;margin-bottom: 20px;}
+.card-hotspot h3 b{
+    font-size: 20px;
+}
+.card-hotspot h4{
+    font-size: 12px;
+    color: #333; 
+    margin-bottom: 20px;
+}
+.card-hotspot h5{
+    font-family: 'Source Sans Pro';
+    font-size: 25px;
+    font-weight: 700;
+}
+.card-hotspot button{    position: absolute;
+    position: absolute;
+    bottom: 10px;
+    align-self: flex-end;
+    width: 91px;
+    height: 40px;
+    margin-left: 204px;
+    border: none;
+    border-radius: 50px;
+    background-color: #00bcf1;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    box-shadow: 5px 4px 1px 0px rgb(0 0 0 / 42%);
+    cursor: pointer;
+}
+.active{
+    background-color: #1c6698 !important;
+}
+
+/* Footer */		
+.navbar {
+    list-style-type: none;
+    display: inline-block;
+    border-width: 1px 0px 0px;
+    border-right-style: initial;
+    border-bottom-style: initial;
+    border-left-style: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    font-weight: 600;
+    line-height: 13px;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.35s ease 0s;
+    text-decoration: none;
+    width: 100%;
+    max-width: 480px;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    padding: 10px;
+    font-size: 1em;
+    margin: 0px;
+    background-color: #1b1f22;
+
+}
+
+.row-navbar {
+    display: inline-block;
+    width: 20%;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.navigation {
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 2px;
+}
+
+.icon-menu {
+    display: inline-block;
+    width: 42%;
+}
+
+.navbar-title {
+    color: rgb(0, 170, 239);
+    white-space: nowrap;
+    display: inline-block;
+}
+h6 {
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}

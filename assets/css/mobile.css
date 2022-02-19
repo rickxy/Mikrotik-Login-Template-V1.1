@@ -1,0 +1,10 @@
+@media only screen and (max-width:600px){
+    .banner{background-position: center center;}
+    .nav-menu{width: 50%;}
+}
+@media only screen and (max-width:1000px){
+    .banner{background-position: center center;}
+    .nav-menu{width: 50%;}
+    .paket-hotspot{width: 90%;}
+    .rumahan-card{width: 90%;}
+}

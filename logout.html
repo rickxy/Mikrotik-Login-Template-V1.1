@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="title">LOGOUT</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<link rel="icon" href="favicon2.png" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<script type="text/javascript" src="data.js"></script>
+</head>
+<style type="text/css">
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+  border-radius: 5px;
+</style>
+<body class="bg">
+
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+<center>
+<div class="card">
+<br>
+<h2 class="major">ANDA TELAH LOGOUT</h2>
+
+  <table class="tstatus" align="center">
+    <tr>
+      <td align="right">User</td>
+      <td>$(username)</td>
+    </tr>
+    <tr>
+      <td align="right">IP Address</td>
+      <td>$(ip)</td>
+    </tr>
+    <tr>
+      <td align="right">MAC</td>
+      <td>$(mac)</td>
+    </tr>
+    <tr>
+      <td align="right">UL | DL</td>
+      <td>$(bytes-in-nice) | $(bytes-out-nice)</td>
+    </tr>
+    <tr>
+      <td align="right">Aktif</td>
+      <td>$(uptime)</td>
+    </tr>
+    $(if session-time-left)	  
+    <tr>
+      <td align="right">Sisa Waktu</td>
+      <td>$(session-time-left)</td>
+    </tr>
+    $(endif)
+  </table>
+  <br>
+    <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+      <input type="submit" class="buttona" value=" Login kembali ">
+    </form>
+  <br>
+
+</div>
+</center>
+<script type="text/javascript" >
+        var mydata = JSON.parse(data);
+        var title = document.getElementById('title').innerHTML = mydata[0].nama ;
+</script>
+</body>
+</html>
